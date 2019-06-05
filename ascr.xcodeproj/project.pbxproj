@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3C965D17AE5E6237C1BE97D /* Pods_ascr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C51023399F35F4CFE3B6D1 /* Pods_ascr.framework */; };
 		FAC38BA722A7A86300A81354 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC38BA622A7A86300A81354 /* AppDelegate.swift */; };
 		FAC38BA922A7A86300A81354 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC38BA822A7A86300A81354 /* ViewController.swift */; };
 		FAC38BAC22A7A86300A81354 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC38BAA22A7A86300A81354 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63C51023399F35F4CFE3B6D1 /* Pods_ascr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ascr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50D24A1F1B608B096BFAD8A /* Pods-ascr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ascr.release.xcconfig"; path = "Target Support Files/Pods-ascr/Pods-ascr.release.xcconfig"; sourceTree = "<group>"; };
+		F0ED23628A9F4AB451B99C4B /* Pods-ascr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ascr.debug.xcconfig"; path = "Target Support Files/Pods-ascr/Pods-ascr.debug.xcconfig"; sourceTree = "<group>"; };
 		FAC38BA322A7A86300A81354 /* ascr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ascr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC38BA622A7A86300A81354 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC38BA822A7A86300A81354 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C965D17AE5E6237C1BE97D /* Pods_ascr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23A39CB78DEEF923779AE2B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0ED23628A9F4AB451B99C4B /* Pods-ascr.debug.xcconfig */,
+				A50D24A1F1B608B096BFAD8A /* Pods-ascr.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		77160761775CF94EE662E1B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63C51023399F35F4CFE3B6D1 /* Pods_ascr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAC38B9A22A7A86300A81354 = {
 			isa = PBXGroup;
 			children = (
 				FAC38BA522A7A86300A81354 /* ascr */,
 				FAC38BA422A7A86300A81354 /* Products */,
+				23A39CB78DEEF923779AE2B9 /* Pods */,
+				77160761775CF94EE662E1B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC38BB522A7A86400A81354 /* Build configuration list for PBXNativeTarget "ascr" */;
 			buildPhases = (
+				C6618CF7CFA50BFD024A2503 /* [CP] Check Pods Manifest.lock */,
 				FAC38B9F22A7A86300A81354 /* Sources */,
 				FAC38BA022A7A86300A81354 /* Frameworks */,
 				FAC38BA122A7A86300A81354 /* Resources */,
+				BB0EDBBC3C2DB4FC361FC1CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB0EDBBC3C2DB4FC361FC1CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ascr/Pods-ascr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ascr/Pods-ascr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ascr/Pods-ascr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6618CF7CFA50BFD024A2503 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ascr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAC38B9F22A7A86300A81354 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		FAC38BB622A7A86400A81354 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0ED23628A9F4AB451B99C4B /* Pods-ascr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +368,7 @@
 		};
 		FAC38BB722A7A86400A81354 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50D24A1F1B608B096BFAD8A /* Pods-ascr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
